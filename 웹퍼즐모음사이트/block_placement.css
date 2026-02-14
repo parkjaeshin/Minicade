@@ -1,0 +1,111 @@
+:root {
+    --bg-darker: #0d1117;
+    --bg-panel: #161b22;
+    --accent-primary: #58a6ff;
+    --border-subtle: #30363d;
+    --text-muted: #8b949e;
+    --cell-empty: #010409;
+    --cell-hover: rgba(88, 166, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-darker);
+    color: #c9d1d9;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 95vw;
+    height: 90vh;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    position: relative;
+    /* For absolute positioning of children */
+
+    /* 50x50 Grid Pattern */
+    background-image:
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: -1px -1px;
+    /* Align grid lines */
+}
+
+#mouse-status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #00ff00;
+    font-family: monospace;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+/* Bottom Controls - Absolute positioning to stay at bottom */
+.bottom-controls {
+    width: 100%;
+}
+
+.bottom-controls .action-btn {
+    width: auto;
+    padding: 10px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: var(--accent-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.bottom-controls .action-btn:hover {
+    transform: translateY(-2px);
+    background: #79c0ff;
+}
+
+.bottom-controls .action-btn:active {
+    transform: translateY(0);
+}
+
+.draggable-object {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-primary);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: grab;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    font-weight: bold;
+    user-select: none;
+    touch-action: none;
+}
+
+.draggable-object:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.8);
+}

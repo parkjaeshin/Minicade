@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두쫀쿠 클리커 - Web Arcade</title>
+    <link rel="stylesheet" href="dujonku_clicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <header>
+            <button class="back-btn" onclick="window.location.href='index.html'">← ARCADE</button>
+            <h1>두쫀쿠 클리커</h1>
+            <div class="score-container">
+                <span id="score">0</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="dujonku-character" class="dujonku">
+                <div class="cookie-body">
+                    <div class="filling"></div>
+                    <div class="kataifi-layer">
+                        <span class="strand s1"></span>
+                        <span class="strand s2"></span>
+                        <span class="strand s3"></span>
+                        <span class="strand s4"></span>
+                        <span class="strand s5"></span>
+                    </div>
+                    <div class="face">
+                        <div class="eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="smile"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="hint">두쫀쿠를 눌러보세요! (바삭!)</p>
+        </main>
+    </div>
+
+    <script src="dujonku_clicker.js"></script>
+</body>
+
+</html>
