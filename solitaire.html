@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솔리테어 - Web Arcade</title>
+    <link rel="stylesheet" href="solitaire.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <header>
+            <h1>솔리테어</h1>
+            <div class="stats">
+                <div class="stat-item">점수: <span id="score">0</span></div>
+                <div class="stat-item">시간: <span id="timer">0</span></div>
+            </div>
+            <button id="new-game-btn">새 게임</button>
+        </header>
+
+        <div class="solitaire-container">
+            <div class="top-row">
+                <div class="deck-area">
+                    <div id="deck" class="card-slot deck"></div>
+                    <div id="waste" class="card-slot waste"></div>
+                </div>
+                <div class="foundation-area">
+                    <div id="f0" class="card-slot foundation" data-suit="h"></div>
+                    <div id="f1" class="card-slot foundation" data-suit="d"></div>
+                    <div id="f2" class="card-slot foundation" data-suit="c"></div>
+                    <div id="f3" class="card-slot foundation" data-suit="s"></div>
+                </div>
+            </div>
+
+            <div id="tableau" class="tableau-area">
+                <div id="t0" class="tableau-column"></div>
+                <div id="t1" class="tableau-column"></div>
+                <div id="t2" class="tableau-column"></div>
+                <div id="t3" class="tableau-column"></div>
+                <div id="t4" class="tableau-column"></div>
+                <div id="t5" class="tableau-column"></div>
+                <div id="t6" class="tableau-column"></div>
+            </div>
+        </div>
+
+        <footer>
+            <button onclick="window.close()">게임 종료</button>
+        </footer>
+    </div>
+    <script src="solitaire.js"></script>
+</body>
+
+</html>
